@@ -1,0 +1,28 @@
+{
+  "name": "astro-pandacss-practice",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "panda codegen"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.3.2",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "astro": "^2.10.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@pandacss/astro": "^0.12.1",
+    "@pandacss/dev": "^0.12.1",
+    "prettier": "^3.0.2",
+    "prettier-plugin-astro": "^0.12.0",
+    "sass": "^1.66.1"
+  }
+}

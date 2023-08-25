@@ -1,0 +1,29 @@
+---
+import AboutSection from '@/components/blocks/AboutSection'
+import ActivitySection from '@/components/blocks/ActivitySection'
+import BannerSection from '@/components/blocks/BannerSection'
+import CalendarSection from '@/components/blocks/CalendarSection'
+import HeroSection from '@/components/blocks/HeroSection'
+import NewsSection from '@/components/blocks/NewsSection'
+import Layout from '@/layouts/Layout.astro'
+import { HStack } from 'styled-system/jsx'
+---
+
+<Layout>
+  <main>
+    <HeroSection client:only="react" />
+    <HStack alignItems={'flex-start'} gap={'80px'} mt={'80px'} px={'80px'}>
+      <NewsSection client:only="react" />
+      <CalendarSection />
+    </HStack>
+    <HStack alignItems={'flex-start'} mt={'120px'} px={'80px'}>
+      <AboutSection />
+    </HStack>
+    <HStack alignItems={'flex-start'} mt={'120px'} px={'80px'}>
+      <ActivitySection />
+    </HStack>
+    <HStack alignItems={'flex-start'} mt={'80px'} px={'80px'}>
+      <BannerSection />
+    </HStack>
+  </main>
+</Layout>
