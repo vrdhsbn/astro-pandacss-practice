@@ -23,7 +23,7 @@ const Table = ({ data }: { data: Array<DataType> }) => {
             <styled.th borderTop={'solid 1px #ccc'} py={'16px'} fontWeight={'bold'}>
               {row.date}
             </styled.th>
-            <styled.td borderTop={'solid 1px #ccc'} py={'16px'} pl={'40px'}>
+            <styled.td borderTop={'solid 1px #ccc'} py={'16px'} pl={{ base: '16px', md: '40px' }}>
               {row.href ? (
                 <styled.a href={row.href} color={'#0073ff'} fontWeight={'bold'}>
                   {row.title}

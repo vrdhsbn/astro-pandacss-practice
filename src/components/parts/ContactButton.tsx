@@ -10,7 +10,7 @@ const ContactButton = ({ children }: { children: ReactNode }) => {
       p={'16px'}
       color={'#fff'}
       fontWeight={'700'}
-      w={'520px'}
+      w={{ base: '100%', md: '520px' }}
       cursor={'pointer'}
       transition={'background .3s ease'}
       _hover={{

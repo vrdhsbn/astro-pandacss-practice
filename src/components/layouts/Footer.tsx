@@ -1,5 +1,6 @@
-import { styled } from 'styled-system/jsx'
+import { Stack, styled } from 'styled-system/jsx'
 import { HStack, VStack } from 'styled-system/jsx'
+import ColumnContainer from '../parts/ColumnContainer'
 
 const menuItems1 = [
   { label: '🐼テストサイトとは', href: '#' },
@@ -23,20 +24,28 @@ const menuItems3 = [
 const Footer = () => {
   return (
     <styled.footer bg={'#333'} color={'#fff'} p={'32px'}>
-      <HStack justifyContent={'space-between'} alignItems={'flex-start'}>
-        <HStack alignItems={'flex-start'} gap={'32px'}>
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        justifyContent={'space-between'}
+        alignItems={'flex-start'}
+      >
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          alignItems={'flex-start'}
+          gap={{ base: '32px', md: '48px' }}
+        >
           <ColumnContainer headings="協議会について" array={menuItems1} />
           <VStack alignItems={'flex-start'}>
-            <HStack alignItems={'flex-start'} gap={'32px'}>
-              <ColumnContainer headings="活動内容" array={menuItems2} />
-            </HStack>
-            <HStack alignItems={'flex-start'} gap={'32px'} mt={'24px'}>
-              <ColumnContainer headings="" array={menuItems3} />
-            </HStack>
+            <ColumnContainer headings="活動内容" array={menuItems2} />
+            <ColumnContainer headings="" array={menuItems3} mt={'24px'} />
           </VStack>
-        </HStack>
-        <VStack gap={'4em'} alignItems={'stretch'}>
-          <HStack alignItems={'flex-start'} gap={'32px'}>
+        </Stack>
+        <VStack gap={'4em'} alignItems={'stretch'} mt={{ base: '32px', md: '0' }}>
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            alignItems={'flex-start'}
+            gap={{ base: '8px', md: '32px' }}
+          >
             <styled.p>お問い合わせ</styled.p>
             <styled.p fontWeight={'700'}>
               🐼テストサイト事務局
@@ -47,29 +56,13 @@ const Footer = () => {
               <br />
               TEL 0120-000-000（直通）
             </styled.p>
-          </HStack>
+          </Stack>
           <styled.p fontSize={'12px'} textAlign={'right'}>
             (c)Panda CSS test site
           </styled.p>
         </VStack>
-      </HStack>
+      </Stack>
     </styled.footer>
-  )
-}
-
-const ColumnContainer = ({ headings, array }: { headings: string; array: any[] }) => {
-  const menuItems = array
-  return (
-    <>
-      <styled.p minW={'4em'}>{headings}</styled.p>
-      <VStack alignItems={'flex-start'}>
-        {menuItems.map((item, index) => (
-          <styled.a href="" key={index} fontWeight={'700'} _hover={{ opacity: '.6' }}>
-            {item.label}
-          </styled.a>
-        ))}
-      </VStack>
-    </>
   )
 }
 

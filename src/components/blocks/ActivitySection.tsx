@@ -1,4 +1,4 @@
-import { HStack, styled } from 'styled-system/jsx'
+import { HStack, Stack, styled } from 'styled-system/jsx'
 import Headings from '../parts/Headings'
 import Card from '../parts/Card'
 
@@ -19,11 +19,16 @@ const ActivitySection = () => {
   return (
     <styled.section>
       <Headings center>活動内容</Headings>
-      <HStack gap={'32px'} alignItems={'flex-start'} mt={'40px'}>
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        gap={'32px'}
+        alignItems={'flex-start'}
+        mt={'40px'}
+      >
         {contentList.map((content, index) => (
           <Card key={index} title={content.title} description={content.description} />
         ))}
-      </HStack>
+      </Stack>
     </styled.section>
   )
 }

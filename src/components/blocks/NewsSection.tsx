@@ -12,7 +12,7 @@ const newsList = [
   },
   {
     id: 1,
-    date: '2020.02.14',
+    date: '2020.03.04',
     title: '「日経×TECH」にて○○○○が紹介されました',
     href: '#',
   },

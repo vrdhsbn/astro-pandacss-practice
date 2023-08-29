@@ -17,7 +17,7 @@ const Header = () => {
         <styled.h1 fontSize={'20px'} fontWeight={'700'}>
           🐼テストサイト
         </styled.h1>
-        <HStack gap={'40px'}>
+        <HStack gap={'40px'} hideBelow={'sm'}>
           <styled.ul display={'flex'} gap={'32px'}>
             {menuItems.map((item, index) => (
               <styled.li key={index} fontWeight={'700'}>

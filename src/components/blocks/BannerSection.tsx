@@ -1,8 +1,9 @@
-import { Box, HStack, VStack, styled } from 'styled-system/jsx'
+import { Box, HStack, Stack, VStack, styled } from 'styled-system/jsx'
 
 const BannerSection = () => {
   return (
-    <HStack
+    <Stack
+      direction={{ base: 'column', md: 'row' }}
       alignItems={'flex-start'}
       gap={'32px'}
       pt={'40px'}
@@ -21,7 +22,7 @@ const BannerSection = () => {
           説明テキストが入ります説明テキストが入ります
         </styled.p>
       </VStack>
-    </HStack>
+    </Stack>
   )
 }
 
