@@ -1,4 +1,4 @@
-import { Box, HStack, Stack, VStack, styled } from 'styled-system/jsx'
+import { Box, Stack, VStack, styled } from 'styled-system/jsx'
 
 const BannerSection = () => {
   return (

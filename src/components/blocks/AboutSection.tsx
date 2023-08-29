@@ -1,4 +1,4 @@
-import { HStack, Stack, styled } from 'styled-system/jsx'
+import { Stack, styled } from 'styled-system/jsx'
 import Headings from '../parts/Headings'
 import Card from '../parts/Card'
 

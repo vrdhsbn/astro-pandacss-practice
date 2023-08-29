@@ -1,5 +1,4 @@
-import { Stack, styled } from 'styled-system/jsx'
-import { HStack, VStack } from 'styled-system/jsx'
+import { Stack, VStack, styled } from 'styled-system/jsx'
 import ColumnContainer from '../parts/ColumnContainer'
 
 const menuItems1 = [

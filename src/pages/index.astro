@@ -6,7 +6,7 @@ import CalendarSection from '@/components/blocks/CalendarSection'
 import HeroSection from '@/components/blocks/HeroSection'
 import NewsSection from '@/components/blocks/NewsSection'
 import Layout from '@/layouts/Layout.astro'
-import { HStack, Stack } from 'styled-system/jsx'
+import { Box, Stack } from 'styled-system/jsx'
 ---
 
 <Layout>
@@ -22,14 +22,14 @@ import { HStack, Stack } from 'styled-system/jsx'
       <NewsSection client:only="react" />
       <CalendarSection />
     </Stack>
-    <HStack alignItems={'flex-start'} mt={'120px'} px={{ base: '32px', md: '80px' }}>
+    <Box mt={'120px'} px={{ base: '32px', md: '80px' }}>
       <AboutSection />
-    </HStack>
-    <HStack alignItems={'flex-start'} mt={'120px'} px={{ base: '32px', md: '80px' }}>
+    </Box>
+    <Box mt={'120px'} px={{ base: '32px', md: '80px' }}>
       <ActivitySection />
-    </HStack>
-    <HStack alignItems={'flex-start'} mt={'80px'} px={{ base: '32px', md: '80px' }}>
+    </Box>
+    <Box mt={'80px'} px={{ base: '32px', md: '80px' }}>
       <BannerSection />
-    </HStack>
+    </Box>
   </main>
 </Layout>
