@@ -11,7 +11,7 @@ const BannerSection = () => {
       borderTop={'solid 1px #ccc'}
     >
       <Box w={'100%'}>
-        <styled.img src="/assets/images/image2.png" alt="image" w={'100%'} />
+        <styled.img src="/panda/assets/images/image2.png" alt="image" w={'100%'} />
       </Box>
       <VStack w={'100%'} alignItems={'flex-start'}>
         <styled.p fontSize={'18px'} fontWeight={'bold'} color={'#0073ff'}>
