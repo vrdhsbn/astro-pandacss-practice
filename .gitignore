@@ -1,5 +1,6 @@
 # build output
-dist/
+# distにどんな差分が出るか見てみる
+# dist/
 
 # generated types
 .astro/
